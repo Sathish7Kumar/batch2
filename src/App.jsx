@@ -1,22 +1,43 @@
 import './App.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import State from './pages/State'
 import ClassProps from './pages/ClassProps'
 import FuncProps from './pages/FuncProps'
 import Lifecycle from './pages/Lifecycle'
+import Effect from './pages/Effect'
+import Home1 from './pages/contectClass/Home1'
+import { createContext } from 'react'
+import Reducer from './pages/Reducer'
 
- class App extends React.Component {
-  render() {
+export const NameContext = createContext()
+export const BalanceContext = createContext()
+
+ function App () {
+
+  // const [name, setname] = useState("Ms Dhoni")
+  const [balance, setbalance] = useState(1000)
+  
     return (
+      // <>
+      // {/* <h1>React Class </h1>
+      // <ClassProps mobile="Samsung"/>
+      // <FuncProps order="iphone" price="1500"/>
+      // <State/> */}
+      // {/* <Lifecycle/> */}
+      // {/* <Effect/> */}
+      // <Home1 name={name}/>
+      // </>
+      // <>
+      // <NameContext.Provider value={name}>
+      //   <Home1/>
+      // </NameContext.Provider>
+      // </>
       <>
-      {/* <h1>React Class </h1>
-      <ClassProps mobile="Samsung"/>
-      <FuncProps order="iphone" price="1500"/>
-      <State/> */}
-      <Lifecycle/>
+      <BalanceContext.Provider value={balance}>
+        <Reducer/>
+      </BalanceContext.Provider>
       </>
     )
-  }
 }
 export default App
 
