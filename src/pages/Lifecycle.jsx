@@ -1,6 +1,7 @@
 // lifecycle - is only for class component.
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class Lifecycle extends React.Component{
 
@@ -47,6 +48,7 @@ class Lifecycle extends React.Component{
                 <button onClick={this.increment}>ADD</button>
                 <button onClick={this.decrement}>Decrement</button>
             </div>
+            <Link to='/effect'>Click here to Effect</Link>
             </>
         )
     }

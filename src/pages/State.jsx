@@ -51,11 +51,22 @@
 // useState - hook
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const State = () => {
+
   const [count, setcount] = useState(0);
+
+  const nav = useNavigate()
+
   // const handleCount = () =>{
   //     setcount(count+1)
   // }
+
+  const handleClick = () =>{
+    nav('/funcprops')
+  }
+
   return (
     <>
       <h4>State using React-Hooks</h4>
@@ -71,6 +82,8 @@ const State = () => {
       >
         Decrement
       </button>
+      <br /><br />
+      <button onClick={handleClick}>Function Props</button>
     </>
   );
 };

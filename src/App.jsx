@@ -8,6 +8,10 @@ import Effect from './pages/Effect'
 import Home1 from './pages/contectClass/Home1'
 import { createContext } from 'react'
 import Reducer from './pages/Reducer'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import HomepageRoute from './pages/HomepageRoute'
+import Navigation from './pages/Navigation'
+
 
 export const NameContext = createContext()
 export const BalanceContext = createContext()
@@ -18,24 +22,21 @@ export const BalanceContext = createContext()
   const [balance, setbalance] = useState(1000)
   
     return (
-      // <>
-      // {/* <h1>React Class </h1>
-      // <ClassProps mobile="Samsung"/>
-      // <FuncProps order="iphone" price="1500"/>
-      // <State/> */}
-      // {/* <Lifecycle/> */}
-      // {/* <Effect/> */}
-      // <Home1 name={name}/>
-      // </>
-      // <>
-      // <NameContext.Provider value={name}>
-      //   <Home1/>
-      // </NameContext.Provider>
-      // </>
       <>
-      <BalanceContext.Provider value={balance}>
-        <Reducer/>
+     <BrowserRouter>
+     <Navigation/>
+     <BalanceContext.Provider value={balance}>
+      <Routes>
+      <Route path='/' element={<HomepageRoute/>} />
+      <Route path='/reducer' element={<Reducer/>} />
+      <Route path='/state' element={<State/>} />
+      <Route path='/effect' element={<Effect/>} />
+      <Route path='/classprops' element={<ClassProps/>} />
+      <Route path='/funcprops' element={<FuncProps/>} />
+      <Route path='/lifecycle' element={<Lifecycle/>} />
+      </Routes>
       </BalanceContext.Provider>
+     </BrowserRouter>
       </>
     )
 }

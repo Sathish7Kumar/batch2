@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Effect = () => {
 
@@ -28,6 +29,8 @@ const Effect = () => {
     <button onClick={()=>setincrement(increment+1)}>Increment</button>
     <h1>{`Decrement : ${decrement}`}</h1>
     <button onClick={()=>setdecrement(decrement-1)}>Decrement</button>
+    <br /> <hr/> <br />
+    <Link to='/lifecycle'>Click here to Lifecycle</Link>
     </>
   )
 }
