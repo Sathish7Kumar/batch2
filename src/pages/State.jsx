@@ -52,6 +52,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 const State = () => {
 
@@ -72,8 +73,9 @@ const State = () => {
       <h4>State using React-Hooks</h4>
       <h1>Count : {count}</h1>
       {/* <button onClick={handleCount}>Increment</button> */}
-      <button onClick={() => setcount(count + 1)}>Increment</button>
+      <button className="btn bg-info"  onClick={() => setcount(count + 1)}>Increment</button>
       <button
+      className="btn btn-primary" 
         onClick={() => {
           if (count > 0) {
             setcount(count - 1);
@@ -83,7 +85,9 @@ const State = () => {
         Decrement
       </button>
       <br /><br />
-      <button onClick={handleClick}>Function Props</button>
+
+      <Button onClick={handleClick} variant="dark">Function Props</Button>
+      {/* <button className="btn" onClick={handleClick}>Function Props</button> */}
     </>
   );
 };

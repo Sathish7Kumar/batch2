@@ -22,3 +22,8 @@ nav ul{
     justify-content: space-around;
     align-items: center;
 }
+
+.icon{
+    color: palevioletred;
+    font-size: 45px;
+}
