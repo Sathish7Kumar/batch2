@@ -11,6 +11,7 @@ const Navigation = () => {
             <li><Link  to='/effect' >Effect</Link></li>
             <li><Link  to='/reducer' >Reducer</Link></li>
             <li><Link  to='/classprops' >Class Props</Link></li>
+            <li><Link  to='/vote' >Vote</Link></li>
         </ul>
     </nav>
     </>

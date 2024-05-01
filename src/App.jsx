@@ -11,6 +11,7 @@ import Reducer from './pages/Reducer'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import HomepageRoute from './pages/HomepageRoute'
 import Navigation from './pages/Navigation'
+import Vote from './pages/Vote'
 
 
 export const NameContext = createContext()
@@ -34,6 +35,7 @@ export const BalanceContext = createContext()
       <Route path='/classprops' element={<ClassProps/>} />
       <Route path='/funcprops' element={<FuncProps/>} />
       <Route path='/lifecycle' element={<Lifecycle/>} />
+      <Route path='/vote' element={<Vote/>} />
       </Routes>
       </BalanceContext.Provider>
      </BrowserRouter>
