@@ -12,6 +12,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import HomepageRoute from './pages/HomepageRoute'
 import Navigation from './pages/Navigation'
 import Vote from './pages/Vote'
+import SampleNav from './Nav/SampleNav'
 
 
 export const NameContext = createContext()
@@ -25,7 +26,8 @@ export const BalanceContext = createContext()
     return (
       <>
      <BrowserRouter>
-     <Navigation/>
+     {/* <Navigation/> */}
+     <SampleNav/>
      <BalanceContext.Provider value={balance}>
       <Routes>
       <Route path='/' element={<HomepageRoute/>} />

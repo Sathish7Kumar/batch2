@@ -73,7 +73,7 @@ const App3 = () => {
             path="/"
             element={<FoodHome pizza={pizza} burger={burger} />}
           />
-          <Route path="/pizza" element={<Pizza pizza={pizza} />} />
+          <Route path="/pizza" element={<Pizza pizza={pizza} addCart={addCart} />} />
           <Route path="/burger" element={<Burger burger={burger} />} />
           <Route
             path="/food"
