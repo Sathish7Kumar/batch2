@@ -34,7 +34,7 @@ const Fetch = () => {
 
   const getProducts = async () =>{
     try {
-        const response = await axios.get('https://fakestoreapi.com/products')
+        const response = await axios.get('https://663b1ebbfee6744a6ea05dca.mockapi.io/todo/v1/todoData')
         setproducts(response.data);
     } catch (error) {
         console.log(error);
@@ -53,7 +53,10 @@ const Fetch = () => {
         return (
           <div key={i}>
             <h1>{e.title}</h1>
-            <img src={e.image} height={100} width={100} alt="" />
+            <img src={e.image} height={100} width={100} />
+            <h3>Description : {e.decs}</h3>
+            <h2>Price : {e.price}</h2>
+            <button>Add to Cart</button>
           </div>
         );
       })}
