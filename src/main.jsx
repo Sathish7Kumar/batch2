@@ -18,6 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <App3/>
     // <App4/>
     // <App5/>
-    <App7/>
-    // <App8/>
+    // <App7/>
+    <App8/>
 )
